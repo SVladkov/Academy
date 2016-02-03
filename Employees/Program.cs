@@ -20,12 +20,13 @@ namespace EmployeesSystem
             SoftDudes.AddRelation("Petar", "Dimitar");
             SoftDudes.AddRelation("Blagoy", "Ivan");
             SoftDudes.AddRelation("Anton", "Megi<3");
-            
+            SoftDudes.RootLeader = "Nikolay";
+
             String output = SoftDudes.ToString();
             Console.WriteLine(output);
 
-            SoftDudes.LowestCommonLeader("Nikolay", "Simeon", "Megi<3");
-            Console.WriteLine(SoftDudes.lowestCommonLeader);
+            String lowestCommonLeader = SoftDudes.LowestCommonLeader("Simeon", "Megi<3");
+            Console.WriteLine(lowestCommonLeader);
         }
     }
 }

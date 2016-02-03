@@ -9,11 +9,25 @@ namespace EmployeesSystem
     public class EmployeesHierarchy
     {
         private Dictionary<String, List<String>> employees;
-        public String lowestCommonLeader;
+        private String lowestCommonLeader;
+        private String rootLeader;
 
         public EmployeesHierarchy()
         {
             employees = new Dictionary<String, List<String>>();
+        }
+
+        public String RootLeader
+        {
+            get
+            {
+                return this.rootLeader;
+            }
+
+            set
+            {
+                this.rootLeader = value;
+            }
         }
 
         public void AddRelation(String leaderName, String employeeName)
@@ -57,7 +71,14 @@ namespace EmployeesSystem
             return output.ToString();
         }
 
-        public int LowestCommonLeader(String searchedEmployee, String firstEmployee, String secondEmployee)
+        public String LowestCommonLeader(String firstEmployee, String secondEmployee)
+        {
+            LowestCommonLeader(rootLeader, firstEmployee, secondEmployee);
+
+            return lowestCommonLeader;
+        }
+
+        private int LowestCommonLeader(String searchedEmployee, String firstEmployee, String secondEmployee)
         {
             List<String> directEmployees;
 
