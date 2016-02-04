@@ -1,9 +1,10 @@
-Ivan
-Petar
-Nikolay - Simeon
-Nikolay - Anton
-Anton - Dragan
-Dragan - Petar
-Dragan - Blagoy
-Petar - Dimitar
-Blagoy - Ivan
+Станимир
+Петър
+Николай - Симеон
+Николай - Антон
+Антон - Драган
+Драган - Петър
+Драган - Благой
+Петър - Димитър
+Благой - Иван
+Антон - Станимир
