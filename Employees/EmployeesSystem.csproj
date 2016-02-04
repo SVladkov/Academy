@@ -43,7 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConsoleInput.cs" />
     <Compile Include="EmployeesHierarchy.cs" />
+    <Compile Include="FileReader.cs" />
+    <Compile Include="IInputReader.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -10,22 +10,29 @@ namespace EmployeesSystem
     {
         static void Main()
         {
-            EmployeesHierarchy SoftDudes = new EmployeesHierarchy();
+            IInputReader inputReader;
 
-            SoftDudes.AddRelation("Nikolay", "Simeon");
-            SoftDudes.AddRelation("Nikolay", "Anton");
-            SoftDudes.AddRelation("Anton", "Dragan");
-            SoftDudes.AddRelation("Dragan", "Petar");
-            SoftDudes.AddRelation("Dragan", "Blagoy");
-            SoftDudes.AddRelation("Petar", "Dimitar");
-            SoftDudes.AddRelation("Blagoy", "Ivan");
-            SoftDudes.AddRelation("Anton", "Megi<3");
-            SoftDudes.RootLeader = "Nikolay";
+            Console.WriteLine("Input from:\n1.File\n2.Console");
+            int inputMode = int.Parse(Console.ReadLine());
 
-            String output = SoftDudes.ToString();
-            Console.WriteLine(output);
+            if(inputMode == 1)
+            {
+                inputReader = new FileReader();
+            }
+            else
+            {
+                inputReader = new ConsoleInput();
+            }
+            
+            String input = inputReader.GetInput();
+            String[] lines = input.Split(new string[] { "\r\n", "\n" }, StringSplitOptions.None);
+            EmployeesHierarchy SoftDudes = new EmployeesHierarchy(lines);
+            String firstDude = lines[0];
+            String secondDude = lines[1];
+            
+            Console.WriteLine(SoftDudes);
 
-            String lowestCommonLeader = SoftDudes.LowestCommonLeader("Simeon", "Megi<3");
+            String lowestCommonLeader = SoftDudes.LowestCommonLeader(firstDude, secondDude);
             Console.WriteLine(lowestCommonLeader);
         }
     }

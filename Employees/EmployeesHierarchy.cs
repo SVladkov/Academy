@@ -12,9 +12,23 @@ namespace EmployeesSystem
         private String lowestCommonLeader;
         private String rootLeader;
 
-        public EmployeesHierarchy()
+        public EmployeesHierarchy(String[] inputData)
         {
             employees = new Dictionary<String, List<String>>();
+
+            FillData(inputData);
+        }
+
+        private void FillData(String[] input)
+        {
+            for (int i=2; i< input.Length; i++)
+            {
+                String[] inputAsArray = input[i].Split(new string[] { "-", "- ", " - ", " -", " " }, StringSplitOptions.None);
+
+                this.AddRelation(inputAsArray[0], inputAsArray[1]);
+            }
+
+            this.RootLeader = input[2].Split(new string[] { "-", "- ", " - ", " -", " " }, StringSplitOptions.None)[0];
         }
 
         public String RootLeader
