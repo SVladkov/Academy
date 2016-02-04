@@ -33,7 +33,16 @@ namespace EmployeesSystem
             Console.WriteLine(SoftDudes);
 
             String lowestCommonLeader = SoftDudes.LowestCommonLeader(firstDude, secondDude);
-            Console.WriteLine(lowestCommonLeader);
+
+            if (lowestCommonLeader != null)
+            {
+                Console.WriteLine("Common leader of " + firstDude + " and " + secondDude + " is " + lowestCommonLeader);
+            }
+            else
+            {
+                Console.WriteLine("Common leader of " + firstDude + " and " + secondDude + " is " + SoftDudes.RootLeader);
+            }
+
         }
     }
 }
