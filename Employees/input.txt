@@ -1,3 +1,9 @@
-Simeon
-Nikolay
+Ivan
+Petar
 Nikolay - Simeon
+Nikolay - Anton
+Anton - Dragan
+Dragan - Petar
+Dragan - Blagoy
+Petar - Dimitar
+Blagoy - Ivan
