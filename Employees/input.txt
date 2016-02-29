@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿Станимир
 Петър
 Николай - Симеон - Ds
@@ -8,3 +9,14 @@
 Петър - Димитър
 Благой - Иван
 Антон - Станимир
+=======
+Ivan
+Petar
+Nikolay - Simeon
+Nikolay - Anton
+Anton - Dragan
+Dragan - Petar
+Dragan - Blagoy
+Petar - Dimitar
+Blagoy - Ivan
+>>>>>>> 892d4863aa24f6a1016827fc5928e0809fcaec97

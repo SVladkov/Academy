@@ -25,9 +25,15 @@ namespace EmployeesSystem
             {
                 String[] inputAsArray = input[i].Split(new string[] { "-", "- ", " - ", " -", " " }, StringSplitOptions.None);
 
+<<<<<<< HEAD
                 if(inputAsArray.Length > 2)
                 {
                     throw new ArgumentException("A leader can not have more than two employees.");
+=======
+                if (inputAsArray.Length > 2)
+                {
+                    throw new ArgumentException("A leader can't have more than two employees.");
+>>>>>>> 892d4863aa24f6a1016827fc5928e0809fcaec97
                 }
 
                 this.AddRelation(inputAsArray[0], inputAsArray[1]);
