@@ -26,14 +26,22 @@ namespace EmployeesSystem
             
             String input = inputReader.GetInput();
             String[] lines = input.Split(new string[] { "\r\n", "\n" }, StringSplitOptions.None);
-            EmployeesHierarchy SoftDudes = new EmployeesHierarchy(lines);
-            String firstDude = lines[0];
-            String secondDude = lines[1];
-            
-            Console.WriteLine(SoftDudes);
 
-            String lowestCommonLeader = SoftDudes.LowestCommonLeader(firstDude, secondDude);
-            Console.WriteLine(lowestCommonLeader);
+            try
+            {
+                EmployeesHierarchy SoftDudes = new EmployeesHierarchy(lines);
+                String firstDude = lines[0];
+                String secondDude = lines[1];
+
+                Console.WriteLine(SoftDudes);
+
+                String lowestCommonLeader = SoftDudes.LowestCommonLeader(firstDude, secondDude);
+                Console.WriteLine(lowestCommonLeader);
+            }
+            catch (Exception ex)
+            {
+                Console.Error.WriteLine(ex.Message);
+            }
         }
     }
 }
